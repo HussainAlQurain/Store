@@ -2,3 +2,4 @@
 *set_env.bat
 *.env
 *node_modules
+*set_env.bat

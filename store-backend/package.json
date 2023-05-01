@@ -12,7 +12,9 @@
     "tsc": "tsc",
     "reset": "db-migrate reset -e test --config ./database.json",
     
-    "start:dev": "node dist/server.js"
+    "start:dev": "node dist/server.js",
+    "createeb": "eb create --single --keyname myKey --instance-types t2.medium",
+    "setenv": "set_env.bat"
   },
   "author": "Udacity",
   "license": "ISC",
