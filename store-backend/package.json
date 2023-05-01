@@ -2,12 +2,12 @@
   "name": "storefront_backend",
   "version": "0.1.0",
   "description": "",
-  "main": "server.ts",
+  "main": "server.js",
   "engines": {
     "node": "18.16.0"
   },
   "scripts": {
-    "start": "npx tsc && node dist/server.js",
+    "start": "node dist/server.js",
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess \"node ./dist/server.js\"",
     "test": "set ENV=test&& npx tsc && db-migrate --env test up && jasmine && db-migrate reset -e test --config ./database.json",
     "tsc": "tsc",
