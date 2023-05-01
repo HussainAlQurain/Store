@@ -1,0 +1,1 @@
+web: sh -c 'npx tsc && npm run start:dev'
