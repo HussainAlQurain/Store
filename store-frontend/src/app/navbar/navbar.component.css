@@ -1,0 +1,94 @@
+header {
+    background-color: rgb(40, 45, 90);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  
+  nav .group {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .logo {
+    height: 80px;
+    margin-right: 20px;
+  }
+  
+  nav .logo:hover {
+    cursor: pointer;
+  }
+  
+  nav h2 {
+    font-size: 48px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+  }
+
+  nav h2:hover {
+    cursor: pointer;
+  }
+  
+  nav h3 {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    margin: 0 20px;
+    cursor: pointer;
+  }
+  
+  nav h3:hover {
+    color: rgb(198, 204, 224);
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav button {
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+  
+  nav .btn-primary {
+    background-color: #0069d9;
+    color: #fff;
+  }
+  
+  nav .btn-primary:hover {
+    background-color: #0052a1;
+  }
+  
+  nav .btn-secondary {
+    background-color: #e9ecef;
+    color: #333;
+  }
+  
+  nav .btn-secondary:hover {
+    background-color: #ccc;
+  }
+  
+  nav button:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+  }
+  

@@ -1,0 +1,21 @@
+<div class="cart">
+    <div *ngFor="let p of products">
+        <img src="{{p.url}}" alt="product image" />
+        <p>{{p.name}}</p>
+        <p>{{p.price}}$</p>
+        <p>Amount: <input (change)="changeQuantity(p.id!, $event)" type="number" min="1" max="10" [value]="getQuantity(p.id!)"></p>
+        <button (click)="removeFromCart(p.id!)">Remove</button>
+    </div>
+    <div>
+        <form #form="ngForm" (ngSubmit)="onSubmit()">
+            <label for="name">Full name</label>
+            <input [(ngModel)]="full_name" type="text" placeholder="(minimum 3 chacaracters)" required minlength="3" name="full_name">
+            <label for="address">Address</label>
+            <input [(ngModel)]="address" type="text" placeholder="(minimum 6 chacaracters)" required minlength="6" name="address">
+            <label for="credit_card">Credit card number</label>
+            <input [(ngModel)]="credit_card" type="text" placeholder="(16-digits number)" required minlength="16" maxlength="16" pattern="[0-9]*" name="credit_card">
+            <button [disabled]="form.invalid" type="submit">Submit</button>
+        </form>
+    </div>
+    <h2>Total: {{getTotalPrice()}}$</h2>
+</div>

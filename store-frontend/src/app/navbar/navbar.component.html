@@ -1,0 +1,20 @@
+<header>
+  <nav>
+    <div class="group">
+      <img routerLink="/" src="../../assets/logo.png" alt="Logo" class="logo"/>
+      <h2 routerLink="/">myStore</h2>
+    </div>
+    <div class="group">
+      <h3 routerLink="/">Products</h3>
+      <h3 routerLink="/cart">Cart</h3>
+    </div>
+    <div class="group">
+      <ul>
+        <button class="btn btn-primary" (click)="addProduct()">Add Test Products (require login)</button>
+        <button class="btn btn-primary" *ngIf="!(authService.isLoggedIn$ | async)" routerLink="/login">Login</button>
+        <button class="btn btn-primary" *ngIf="authService.isLoggedIn$ | async" (click)="authService.logout()">Logout</button>
+        <button class="btn btn-primary" routerLink="/register" *ngIf="!(authService.isLoggedIn$ | async)">Register</button>
+      </ul>
+    </div>
+  </nav>
+</header>
