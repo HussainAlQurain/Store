@@ -5,7 +5,7 @@ import routes from './routes';
 import morgan from 'morgan';
 
 const app: express.Application = express()
-const address: string = "http://localhost:3000"
+const address: string = "http://localhost:8080"
 
 const corsOptions = {
     origin: 'http://localhost:4200',
