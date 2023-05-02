@@ -65,10 +65,12 @@ jobs:
       - checkout
       - run:
           name: Deploy App
-          # TODO: Install, build, deploy in both apps
+          # : Install, build, deploy in both apps
           command: |
-            echo "# TODO: Install, build, deploy in both apps"
-            
+            echo "# : Deploying front-end app"
+            npm run frontend:install && npm run frontend:build && npm run frontend:deploy
+            echo "# : Deploying backend-end app"
+            npm run api:install && npm run api:build && npm run api:deploy
 workflows:
   udagram:
     jobs:
