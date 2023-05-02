@@ -37,20 +37,20 @@ export class ProductsService {
   //get the token from local storage and decode it
   //then return the user id
   getUserId(): number {
-    let token: string = localStorage.getItem('token')!;
-    let decoded: DecodedToken = jwt_decode(token);
+    const token: string = localStorage.getItem('token')!;
+    const decoded: DecodedToken = jwt_decode(token);
     return decoded["user"]["id"];
   }
 
   //get the order id by the user id
   getOrderId(): Observable<Order> {
-    let userId = this.getUserId();
+    const userId = this.getUserId();
     return this.productHttp.get<Order>(`/api/orders/${userId}`)
   }
 
   //create a new order if the user doesn't have one
   createOrder(): Observable<Order> {
-    let userId = this.getUserId();
+    const userId = this.getUserId();
     return this.productHttp.post<Order>(`/api/orders/create`, {
       status: 'active',
       user_id: userId
@@ -58,7 +58,7 @@ export class ProductsService {
   }
   //update the order status to completed
   updateOrderStatus(): Observable<Order> {
-    let userId = this.getUserId();
+    const userId = this.getUserId();
     return this.productHttp.put<Order>(`/api/orders/${this.order}`, {
       status: 'completed',
       user_id: userId
@@ -67,7 +67,7 @@ export class ProductsService {
 
   // add the product to the cart
   addToCart(quantity: number, productId: string): Observable<OrderProduct> {
-    let userId = this.getUserId();
+    const userId = this.getUserId();
 
     if (this.order == undefined) {
       return this.getOrderId().pipe(
@@ -102,7 +102,7 @@ export class ProductsService {
 
   //get the products in the cart
   getCartProducts(): Observable<OrderProduct[]> {
-    let userId = this.getUserId();
+    const userId = this.getUserId();
     //get the order id
     return this.getOrderId().pipe(
       tap(data => {

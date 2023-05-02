@@ -10,7 +10,7 @@ export type productamount = {amount: number, id: string};
 export class ProductItemComponent implements OnInit {
 
   values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  selectedValue: number = 1;
+  selectedValue = 1;
   @Input() product: Product;
   @Output() addToCart = new EventEmitter<productamount>();
   constructor() { 

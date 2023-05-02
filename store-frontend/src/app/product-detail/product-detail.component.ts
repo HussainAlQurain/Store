@@ -12,7 +12,7 @@ export class ProductDetailComponent implements OnInit {
   product!: Product;
   id!: number;
   values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  selectedValue: number = 1;
+  selectedValue = 1;
   constructor(private route: ActivatedRoute, private http: ProductsService) { }
 
   ngOnInit(): void {
