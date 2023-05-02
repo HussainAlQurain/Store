@@ -1,1 +1,1 @@
-make: chmod +x /var/app/current/start.sh && /var/app/current/start.sh
+make: start.sh && start.sh
