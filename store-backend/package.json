@@ -16,7 +16,8 @@
     "db:migrate": "db-migrate up && db-migrate up",
     "start:dev": "node dist/server.js",
     "createeb": "eb create --single --keyname myKey --instance-types t2.small",
-    "setenv": "set_env.bat"
+    "setenv": "set_env.bat",
+    "deploy": "npm run build && eb list && eb use store-api-dev && eb deploy"
   },
   "author": "Udacity",
   "license": "ISC",
