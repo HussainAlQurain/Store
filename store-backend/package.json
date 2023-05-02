@@ -17,7 +17,7 @@
     "start:dev": "node dist/server.js",
     "createeb": "eb create --single --keyname myKey --instance-types t2.small",
     "setenv": "set_env.bat",
-    "deploy": "eb init store-dev-api --region us-east-1 --platform \"Node.js\" && eb deploy"
+    "deploy": "eb deploy store-dev-api --region us-east-1 --platform \"Node.js\" && eb deploy"
   },
   "author": "Udacity",
   "license": "ISC",
