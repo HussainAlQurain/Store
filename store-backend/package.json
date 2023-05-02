@@ -15,7 +15,7 @@
     "build": "npx tsc",
     "db:migrate": "db-migrate up && db-migrate up",
     "start:dev": "node dist/server.js",
-    "createeb": "eb create --single --keyname myKey --instance-types t2.medium",
+    "createeb": "eb create --single --keyname myKey --instance-types t2.small",
     "setenv": "set_env.bat"
   },
   "author": "Udacity",
