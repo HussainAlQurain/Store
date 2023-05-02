@@ -21,7 +21,7 @@ app.get('/', function (req: Request, res: Response) {
     res.redirect('/api');
 })
 
-app.listen(3000, function () {
+app.listen(8080, function () {
     console.log(`starting app on: ${address}`)
 })
 
