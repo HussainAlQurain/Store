@@ -8,6 +8,7 @@
     "frontend:lint": "cd store-frontend && npm run lint",
     "frontend:deploy": "cd store-frontend && npm run deploy",
     "api:install": "cd store-backend && npm install -f",
+    "api:build": "cd store-backend && npm run build",
     "api:start": "cd store-backend && npm start",
     "api:deploy": "cd store-backend && npm run deploy",
     "deploy": "npm run frontend:deploy && npm run api:deploy"
