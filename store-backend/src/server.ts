@@ -8,7 +8,7 @@ const app: express.Application = express()
 const address: string = "http://localhost:8080"
 
 const corsOptions = {
-    origin: 'http://localhost:4200',
+    origin: '*',
     optionsSuccessStatus: 200
 }
 
