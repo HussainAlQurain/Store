@@ -1,8 +1,8 @@
 {
   "/api/*": {
-      "target": "http://localhost:3000",
+      "target": "http://store-backend.us-east-1.elasticbeanstalk.com",
       "secure": false,
       "changeOrigin": true,
-      "pathRewrite": {"^/api" : "http://localhost:3000"}
+      "pathRewrite": {"^/api" : "http://store-backend.us-east-1.elasticbeanstalk.com"}
       }
   }
