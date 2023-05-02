@@ -60,7 +60,7 @@ export class CartComponent implements OnInit {
   }
   //function that removes the product from the cart
   removeFromCart(id: number){
-    this.http.deleteProductFromCart(id).subscribe((data) => {
+    this.http.deleteProductFromCart(id).subscribe(() => {
       this.onRemove(id);
     })
   }

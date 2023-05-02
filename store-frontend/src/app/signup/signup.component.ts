@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { User } from '../types/user';
 import { Router } from '@angular/router';
@@ -15,10 +15,6 @@ export class SignupComponent {
   username = ''
   password_digest = ''
   constructor(private userService: AuthService, private router: Router) {}
-
-  ngOnInit(): void {
-    //intentionally empty
-  }
 
   onSubmit(): void {
     const user: User = {first_name: this.first_name, last_name: this.last_name, username: this.username, password_digest: this.password_digest, email: this.email}

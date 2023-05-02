@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../types/product';
 export type productamount = {amount: number, id: string};
 
@@ -7,7 +7,7 @@ export type productamount = {amount: number, id: string};
   templateUrl: './product-item.component.html',
   styleUrls: ['./product-item.component.css']
 })
-export class ProductItemComponent implements OnInit {
+export class ProductItemComponent  {
 
   values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   selectedValue = 1;
@@ -23,9 +23,6 @@ export class ProductItemComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void{
-    //intentionally empty
-  }
 
   addProduct(amount: number, p_id: number){
     const pid = p_id.toString();

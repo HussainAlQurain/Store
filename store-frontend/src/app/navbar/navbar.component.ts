@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { catchError, concatMap, forkJoin, map, tap, throwError, timeout } from 'rxjs';
+import { Component } from '@angular/core';
+import { tap } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 import { ProductsService } from '../services/products.service';
-import { Product } from '../types/product';
 import { Location } from '@angular/common';
 
 @Component({
@@ -10,13 +9,10 @@ import { Location } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   constructor(public authService: AuthService, private http: ProductsService, private location: Location) {}
 
-  ngOnInit(){
-    //intentionally left blank
-  }
 
   addProduct() {
     this.http.getJson().pipe(tap(products => {
