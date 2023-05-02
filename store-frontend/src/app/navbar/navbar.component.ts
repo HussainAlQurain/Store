@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   constructor(public authService: AuthService, private http: ProductsService, private location: Location) {}
 
   ngOnInit(){
-    
+    //intentionally left blank
   }
 
   addProduct() {

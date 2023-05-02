@@ -11,9 +11,9 @@
     <div class="group">
       <ul>
         <button class="btn btn-primary" (click)="addProduct()">Add Test Products (require login)</button>
-        <button class="btn btn-primary" *ngIf="!(authService.isLoggedIn$ | async)" routerLink="/login">Login</button>
+        <button class="btn btn-primary" *ngIf="(authService.isLoggedIn$ | async) === false" routerLink="/login">Login</button>
         <button class="btn btn-primary" *ngIf="authService.isLoggedIn$ | async" (click)="authService.logout()">Logout</button>
-        <button class="btn btn-primary" routerLink="/register" *ngIf="!(authService.isLoggedIn$ | async)">Register</button>
+        <button class="btn btn-primary" routerLink="/register" *ngIf="(authService.isLoggedIn$ | async) === false">Register</button>
       </ul>
     </div>
   </nav>

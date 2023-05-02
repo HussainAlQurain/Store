@@ -16,7 +16,9 @@ export class SignupComponent {
   password_digest = ''
   constructor(private userService: AuthService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    //intentionally empty
+  }
 
   onSubmit(): void {
     const user: User = {first_name: this.first_name, last_name: this.last_name, username: this.username, password_digest: this.password_digest, email: this.email}

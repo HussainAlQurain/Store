@@ -96,6 +96,7 @@ export class CartComponent implements OnInit {
       }
     })
     this.http.updateProductQuantity(id, quantity).subscribe((data) => {
+      console.log(data);
     })
   }
 

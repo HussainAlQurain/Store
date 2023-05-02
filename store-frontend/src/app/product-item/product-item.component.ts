@@ -24,7 +24,7 @@ export class ProductItemComponent implements OnInit {
   }
 
   ngOnInit(): void{
-
+    //intentionally empty
   }
 
   addProduct(amount: number, p_id: number){

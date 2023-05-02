@@ -6,7 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class TokenInterceptorService {
 
-  constructor() { }
+  constructor() {
+    //intentionally empty
+   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler) {
     console.log("Interceptor function")
