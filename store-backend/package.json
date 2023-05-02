@@ -12,6 +12,8 @@
     "tsc": "tsc",
     "reset": "db-migrate reset -e test --config ./database.json",
     
+    "build": "npx tsc",
+    "db:migrate": "db-migrate up && db-migrate up",
     "start:dev": "node dist/server.js",
     "createeb": "eb create --single --keyname myKey --instance-types t2.medium",
     "setenv": "set_env.bat"
