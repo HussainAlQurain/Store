@@ -24,16 +24,16 @@ jobs:
             echo "NPM --version" 
             echo $(npm --version)
             npm run frontend:install
-      # Use root level packacke.json to: Install dependencies in the the backend API          
+      # TODO: Install dependencies in the the backend API          
       - run:
-          name: Install Backend Dependencies
+          name: Install API Dependencies
           command: |
-          echo "TODO: Install dependencies in the the backend API  "
-            echo "NODE --version"
-            echo $(node --version)
-            echo "NPM --version"
-            echo $(npm --version)
-            npm run api:install
+           echo "TODO: Install dependencies in the the backend API  "
+           echo "NODE --version"
+           echo $(node --version)
+           echo "NPM --version"
+           echo $(npm --version)
+           npm run api:install
       # TODO: Lint the frontend
       - run:
           name: Front-End Lint
