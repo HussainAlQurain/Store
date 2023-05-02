@@ -1,1 +1,1 @@
-web: sh -c 'npx tsc && npm run start'
+web: sh -c 'npx tsc && npm install -g db-migrate && db-migrate up && db-migrate up && npm run start'
