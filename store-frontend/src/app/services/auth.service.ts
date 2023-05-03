@@ -5,6 +5,7 @@ import { User } from '../types/user';
 import { Router } from '@angular/router';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +29,7 @@ export class AuthService {
   }
 
    createUser(u:User): Observable<User> {
-    return this.auth.post<User>('/api/users/create', u, this.httpOptions).pipe(
+    return this.auth.post<User>(environment.baseUrl + '/api/users/create', u, this.httpOptions).pipe(
       tap((user: User) => {
         this.user = user;
         const token = user.token;
@@ -45,7 +46,7 @@ export class AuthService {
    }
 
    login(username: string, password_digest: string): Observable<User>{
-    return this.auth.post<User>('/api/users/login', {username, password_digest}, this.httpOptions).pipe(
+    return this.auth.post<User>(environment.baseUrl + '/api/users/login', {username, password_digest}, this.httpOptions).pipe(
       tap((user: User) => {
         this.user = user;
         const token = user;
