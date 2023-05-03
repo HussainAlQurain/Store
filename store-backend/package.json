@@ -17,7 +17,7 @@
     "start:dev": "node dist/server.js",
     "createeb": "eb create --single --keyname myKey --instance-types t2.small",
     "setenv": "set_env.bat",
-    "deploy": "eb init --region us-east-1 --platform Node.js store-api-dev && eb deploy store-api-dev --label \"$(date +%Y%m%d%H%M%S)\" --source \"s3://elasticbeanstalk-us-east-1-250964198472/store-api-dev/app-$(date +%Y%m%d%H%M%S).zip\""
+    "deploy": "eb init --region us-east-1 --platform Node.js store-api-dev && eb deploy store-api-dev --label \"$(date +%Y%m%d%H%M%S)\""
   },
   "author": "Udacity",
   "license": "ISC",
