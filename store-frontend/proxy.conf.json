@@ -1,8 +1,8 @@
 {
   "/api/*": {
-    "target": "http://store-backend.us-east-1.elasticbeanstalk.com",
+    "target": "http://store-api-dev.us-east-1.elasticbeanstalk.com/",
     "secure": false,
     "logLevel": "debug",
-    "pathRewrite": {"^/api" : "http://store-backend.us-east-1.elasticbeanstalk.com/api"}
+    "pathRewrite": {"^/api" : "http://store-api-dev.us-east-1.elasticbeanstalk.com/api"}
   }
 }

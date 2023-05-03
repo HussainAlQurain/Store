@@ -1,8 +1,0 @@
-{
-  "/api/*": {
-      "target": "http://store-backend.us-east-1.elasticbeanstalk.com",
-      "secure": false,
-      "changeOrigin": true,
-      "pathRewrite": {"^/api" : "http://store-backend.us-east-1.elasticbeanstalk.com"}
-      }
-  }
