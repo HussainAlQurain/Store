@@ -1,5 +1,8 @@
 # MyStore
 
+
+## Website link - http://elasticbeanstalk-us-east-1-250964198472.s3-website-us-east-1.amazonaws.com/
+
 MyStore is a single-page application built in Angular, that offers a rich, dynamic experience on the web. It presents a list of product which can be added to a cart then checkout. Bellow are all the functionality one can perform:
 
 * View list of products.
