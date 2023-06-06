@@ -3,7 +3,7 @@
 Store is a full stack application built with Nodejs and PostgreSQL for an online store. This application has both frontend and backend components.
 
 ## Website link (Frontend):
-- http://elasticbeanstalk-us-east-1-250964198472.s3-website-us-east-1.amazonaws.com/
+- Currently not hosted.
 
 
 ## Getting started
